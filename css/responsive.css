@@ -1,0 +1,566 @@
+@media(max-width:1500px) {
+    .slider-content .title {
+        font-size: 44px
+    }
+
+    .booking-form ul li {
+        width: 195px
+    }
+
+    .booking-form ul li:last-child {
+        width: 218px
+    }
+
+    .slider-bg {
+        min-height: 600px;
+        padding: 100px 0 170px
+    }
+
+    .slider-content {
+        margin-top: -20px
+    }
+
+    .booking-list-item .flight-info li {
+        margin-right: 35px
+    }
+}
+
+@media(max-width:1199.98px) {
+    .custom-container {
+        max-width: 960px
+    }
+
+    .header-action>ul li.header-btn {
+        display: none
+    }
+
+    .header-top-left {
+        display: none
+    }
+
+    .booking-form ul li:nth-child(3) {
+        width: 170px
+    }
+
+    .booking-form .form-grp.select {
+        padding: 10px 0
+    }
+
+    .booking-form .form-grp.select .form-select {
+        width: 150px
+    }
+
+    .booking-form ul li:nth-child(4) {
+        width: 240px
+    }
+
+    .booking-form .form-grp.date {
+        padding: 10px 15px
+    }
+
+    .booking-form ul li {
+        width: 150px
+    }
+
+    .booking-form ul li:last-child {
+        width: 188px
+    }
+
+    .booking-form .form-grp.economy {
+        padding: 10px 15px
+    }
+
+    .booking-area .tab-content-wrap {
+        padding: 15px
+    }
+
+    .booking-form ul li:nth-child(2) .form-grp input {
+        padding: 20px 20px 20px 25px
+    }
+
+    .booking-form .form-grp input {
+        padding: 10px 20px;
+        height: 62px
+    }
+
+    .header-top-right ul {
+        justify-content: center
+    }
+
+    .section-title .title {
+        font-size: 32px
+    }
+
+    .breadcrumb-content .title {
+        font-size: 45px
+    }
+
+    .booking-list-area .col-27 {
+        flex: 0 0 70%;
+        width: 70%
+    }
+
+    .booking-list-area .col-73 {
+        flex: 0 0 100%;
+        width: 100%
+    }
+
+    .booking-list-item .flight-info li {
+        margin-right: 50px
+    }
+
+    .widget .flight-stops .form-select {
+        width: 90%
+    }
+
+    .booking-sidebar {
+        margin-top: 80px
+    }
+
+    .booking-details-area .row .col-73 {
+        width: 100%;
+        flex: 0 0 100%
+    }
+
+    .booking-details-area .row .col-27 {
+        flex: 0 0 70%;
+        width: 70%
+    }
+}
+
+@media(max-width:991.98px) {
+    .custom-container {
+        max-width: 720px
+    }
+
+    .menu-area {
+        padding: 20px 0
+    }
+
+    .menu-nav {
+        justify-content: space-between
+    }
+
+    .header-action {
+        margin-right: 40px
+    }
+
+    .menu-outer .navbar-wrap {
+        display: block !important
+    }
+
+    .menu-area .mobile-nav-toggler {
+        display: block
+    }
+
+    .booking-form ul {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .slider-content .title {
+        font-size: 38px
+    }
+
+    .header-action {
+        margin-right: 20px
+    }
+
+    .booking-wrap .nav-tabs .nav-link {
+        font-size: 12px
+    }
+
+    .booking-wrap .nav-tabs .nav-link i {
+        font-size: 14px
+    }
+
+    .form-grp.date ul {
+        flex-wrap: unset
+    }
+
+    .booking-form ul li:nth-child(3) {
+        width: 33.33%
+    }
+
+    .booking-form .form-grp.select {
+        padding: 10px 0
+    }
+
+    .booking-form .form-grp.select .form-select {
+        width: 170px
+    }
+
+    .booking-form ul li {
+        width: 33.33%
+    }
+
+    .booking-form {
+        border: 0;
+        overflow: hidden
+    }
+
+    .booking-form .form-grp {
+        border: 1px solid #dedcd7;
+        margin-left: -1px;
+        height: 62px
+    }
+
+    .booking-form ul li:first-child .form-grp {
+        margin-left: 0
+    }
+
+    .booking-form .form-grp.economy {
+        border: 1px solid #dedcd7
+    }
+
+    .booking-form ul li:nth-child(5) .form-grp,
+    .booking-form ul li:nth-child(4) .form-grp {
+        margin-top: -1px
+    }
+
+    .booking-form ul li:nth-child(4) .form-grp {
+        margin-left: 0
+    }
+
+    .booking-form ul li:nth-child(4) {
+        width: 60%
+    }
+
+    .booking-form .form-grp.date {
+        padding: 10px 30px
+    }
+
+    .booking-form ul li:last-child {
+        width: 40%
+    }
+
+    .booking-form .form-grp.economy {
+        padding: 10px 20px
+    }
+
+    .booking-form ul li:nth-child(2) .form-grp input {
+        padding: 20px 20px 20px 30px
+    }
+
+    .section-title .title {
+        font-size: 30px
+    }
+
+    .footer-widget.privacy {
+        margin-left: 0
+    }
+
+    .footer-bottom {
+        padding: 20px 0
+    }
+
+    .footer-bottom .cart-img {
+        text-align: center !important
+    }
+
+    .booking-list-item .flight-airway {
+        min-width: 37%
+    }
+
+    .booking-list-item .flight-price {
+        border-left: none;
+        padding-left: 0;
+        margin: 0 auto 10px
+    }
+
+    .flight-detail-wrap .flight-detail-right {
+        margin-top: 20px
+    }
+
+    .customer-details-content .content .title {
+        font-size: 20px
+    }
+
+    .booking-details-wrap {
+        padding: 40px 30px 60px
+    }
+}
+
+@media(max-width:767.98px) {
+    .custom-container {
+        max-width: 100%
+    }
+
+
+
+    .header-top {
+        padding: 8px 0 0
+    }
+
+    .header-top-right ul li {
+        margin-right: 10px;
+        padding-right: 10px;
+        margin-bottom: 8px
+    }
+
+    .slider-content .title {
+        font-size: 28px
+    }
+
+    .slider-content p {
+        margin-bottom: 20px;
+        width: 100%
+    }
+
+    .booking-tag ul li a {
+        padding: 12px 15px
+    }
+
+    .booking-wrap .nav-tabs .nav-item {
+        width: 100%;
+        flex: 0 0 100%
+    }
+
+    .booking-wrap .nav-tabs .nav-item:first-child .nav-link {
+        border-radius: 20px 20px 0 0
+    }
+
+    .booking-wrap .nav-tabs .nav-item:last-child .nav-link {
+        border-radius: 0
+    }
+
+    .booking-form ul li {
+        width: 100% !important
+    }
+
+    .booking-form .form-grp {
+        margin-top: -1px;
+        margin-left: 0
+    }
+
+    .booking-form ul li:first-child .form-grp {
+        margin-top: 0
+    }
+
+    .booking-form .form-grp.select .form-select {
+        width: 90%
+    }
+
+    .booking-form .form-grp .exchange-icon {
+        left: 50%;
+        top: -19px;
+        transform: translateX(-50%)
+    }
+
+    .booking-form ul li:nth-child(2) .form-grp input {
+        padding: 20px 20px 20px 20px
+    }
+
+    .booking-form .form-grp.select {
+        padding: 10px 10px
+    }
+
+    .booking-form .form-grp.date {
+        padding: 10px 20px
+    }
+
+    .tab-content-wrap .content-bottom {
+        justify-content: center
+    }
+
+    .tab-content-wrap .content-bottom .promo-code {
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+
+    .features-item {
+        padding: 25px
+    }
+
+    .features-content .title {
+        font-size: 18px
+    }
+
+    .features-icon i {
+        font-size: 40px
+    }
+
+    .features-icon {
+        width: 40px;
+        flex: 0 0 40px;
+        margin-top: 15px
+    }
+
+    .section-title .title {
+        font-size: 26px
+    }
+
+    .best-price a {
+        justify-content: center
+    }
+
+    .fly-next-area .section-title {
+        margin-bottom: 30px
+    }
+
+    .fly-next-nav {
+        margin-bottom: 30px
+    }
+
+    .fly-next-nav button {
+        margin-bottom: 10px
+    }
+
+    .footer-top {
+        padding: 80px 0 50px
+    }
+
+    .breadcrumb-content .title {
+        font-size: 36px
+    }
+
+    .breadcrumb-bg {
+        padding: 100px 0 110px
+    }
+
+    .scroll-top {
+        right: 15px
+    }
+
+    .booking-list-item-inner {
+        padding: 20px
+    }
+
+    .booking-list-item .flight-info li {
+        margin-right: 35px;
+        margin-bottom: 10px
+    }
+
+    .booking-list-item .flight-airway {
+        min-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px
+    }
+
+    .booking-list-item .booking-list-bottom ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse
+    }
+
+    .booking-list-item .booking-list-bottom ul li.detail {
+        margin-top: 10px
+    }
+
+    .flight-detail-wrap {
+        padding: 20px
+    }
+
+    .flight-detail-wrap .flight-date {
+        width: 100%;
+        flex: 0 0 100%
+    }
+
+    .flight-detail-wrap .flight-detail-info {
+        display: block
+    }
+
+    .flight-detail-wrap .flight-detail-info img {
+        margin: 0 0 10px 0
+    }
+
+    .content-top ul {
+        flex-wrap: wrap
+    }
+
+    .booking-list-area .col-27 {
+        flex: 0 0 100%;
+        width: 100%
+    }
+
+    .booking-sidebar .widget.filters .filters-wrap {
+        padding: 30px 25px
+    }
+
+    .customer-details-content .icon {
+        margin-right: 0;
+        margin-bottom: 20px
+    }
+
+    .customer-details-content .content .title {
+        font-size: 18px
+    }
+
+    .customer-progress-step ul li p {
+        font-size: 12px
+    }
+
+    .booking-details-area .primary-contact {
+        padding: 12px 20px;
+        border-radius: 5px 5px 0 0
+    }
+
+    .booking-details-area .primary-contact .title {
+        font-size: 16px
+    }
+
+    .booking-details-wrap {
+        padding: 35px 20px 45px
+    }
+
+    .booking-details-wrap .form-grp .icon {
+        font-size: 18px;
+        margin-right: 8px
+    }
+
+    .booking-details-wrap .form-grp.select-form .form label {
+        display: none
+    }
+
+    .booking-details-wrap ul li {
+        width: 100%
+    }
+
+    .booking-details-wrap ul li:first-child {
+        width: 100%
+    }
+
+    .booking-details-wrap .optional-item .form-grp .form .form-select {
+        font-size: 14px
+    }
+
+    .booking-details-area .row .col-27 {
+        flex: 0 0 100%;
+        width: 100%
+    }
+
+    .booking-details-wrap .gender-select {
+        margin-left: 0
+    }
+}
+
+@media(max-width:420px) {
+    .tab-content-wrap .content-bottom .promo-code {
+        margin-right: 20px;
+        margin-bottom: 0
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+    .custom-container {
+        max-width: 540px
+    }
+
+    .transparent-header:not(.sticky-menu) {
+        top: 72px
+    }
+
+    .tab-content-wrap .content-bottom .promo-code {
+        margin-right: 20px;
+        margin-bottom: 0
+    }
+
+    .flight-detail-wrap .flight-date {
+        width: 55%;
+        flex: 0 0 55%
+    }
+
+    .booking-details-wrap .gender-select {
+        margin-left: 26px
+    }
+}
