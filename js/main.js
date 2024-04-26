@@ -22,11 +22,11 @@ let loginModal = `  <div class="modal fade" id="loginModal" tabindex="-1" aria-l
       <form id="loginForm">
         <div class="mb-3">
           <label for="loginEmail" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="loginEmail" required>
+          <input type="email" class="email form-control" id="loginEmail" required>
         </div>
         <div class="mb-3">
           <label for="loginPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="loginPassword" required>
+          <input type="password" class="password form-control" id="loginPassword" required>
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
@@ -62,6 +62,18 @@ let registerModal = `  <div class="modal fade" id="registerModal" tabindex="-1" 
 </div>`
 
 $('body').append(loginModal,registerModal)
+
+// LoginFunction
+$('#loginForm').on('submit', (e) => {
+  e.preventDefault();
+
+  let email = $('#loginForm .email').val()
+  let password = $('#loginForm .password').val()
+
+  api.userLogin(email, password)
+
+})
+
 
 
 $(".mobile-nav-toggler").on("click", function () {
