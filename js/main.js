@@ -28,6 +28,7 @@ let loginModal = `  <div class="modal fade" id="loginModal" tabindex="-1" aria-l
           <label for="loginPassword" class="form-label">Password</label>
           <input type="password" class="password form-control" id="loginPassword" required>
         </div>
+        <p style = "color:red" class="tips"></p> 
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
     </div>
@@ -54,6 +55,15 @@ let registerModal = `  <div class="modal fade" id="registerModal" tabindex="-1" 
           <label for="registerPassword" class="form-label">Password</label>
           <input type="password" class="form-control" id="registerPassword" required>
         </div>
+        <div class="mb-3">
+          <label for="registerUsername" class="form-label">Username</label>
+          <input type="text" class="form-control" id="registerUsername" required>
+        </div>
+        <div class="mb-3">
+         <label for="registerAge" class="form-label">Age</label>
+         <input type="number" class="form-control" id="registerAge" required>
+        </div>
+        <p style = "color:red" class="tips"></p> 
         <button type="submit" class="btn btn-primary">Register</button>
       </form>
     </div>
@@ -74,7 +84,19 @@ $('#loginForm').on('submit', (e) => {
 
 })
 
+$('#registerForm').on('submit', (e) => {
+  e.preventDefault();
 
+  let email = $('#registerEmail').val()
+  let password = $('#registerPassword').val()
+  let age = $('#registerAge').val()
+  let username = $('#registerUsername').val()
+
+  let data = {email, password, age, username}
+
+  api.userRegister(data)
+
+})
 
 $(".mobile-nav-toggler").on("click", function () {
     $("body").addClass("mobile-menu-visible")
