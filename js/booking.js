@@ -4,33 +4,26 @@ $(".flight-detail-wrap").slideUp();
 
 
 let flightList = []
+api.getFlightsPage({}, getFlightsPageCallback)
+function getFlightsPageCallback(res){
+  console.log(res.data);
+  flightList = flightList.concat(res.data)
+  console.log(flightList,'dd');
+
+  let html = formatBookingListItem(res.data)
+
+  $('#booking-list').append(html)
+  $(".flight-detail-wrap").slideUp();
 
 
-$.ajax({
-  url: "bookingData.json", 
-  dataType: "json",
-  success: function (res) {
-    console.log(res.data);
-    flightList = flightList.concat(res.data)
-    console.log(flightList,'dd');
+  // add click function
+  $('.booking-list-item .flight-price>.btn').on('click', selectFlight)
 
-    let html = formatBookingListItem(res.data)
-
-    $('#booking-list').append(html)
-    $(".flight-detail-wrap").slideUp();
-
-
-    // add click function
-    $('.booking-list-item .flight-price>.btn').on('click', selectFlight)
-
-    $(".detail").on("click", function () {
-      $(this).toggleClass("show");
-      $(this).parent().parent().parent().parent().find(".flight-detail-wrap").slideToggle()
-    });
-  },
-});
-
-
+  $(".detail").on("click", function () {
+    $(this).toggleClass("show");
+    $(this).parent().parent().parent().parent().find(".flight-detail-wrap").slideToggle()
+  });
+}
 function formatBookingListItem(BookingList) {
 
   let html = ""
@@ -47,7 +40,7 @@ function formatBookingListItem(BookingList) {
             <ul class="flight-info">
               <li>${dayjs(item.startTime).format('dddd')},<span>${dayjs(item.startTime).format('MMM DD')}</span></li>
               <li class="time"><span>${dayjs(item.startTime).format('HH:mm')}</span>DAC</li>
-              <li>${item.flightTime}<span>${item.nonStop ? 'Non-stop': item.transit.length + ' Stops'}</span></li>
+              <li>${item.flightTime}<span>${item.nonStop ? 'Non-stop': '' + ' Stops'}</span></li>
             </ul>
             <div class="flight-price">
               <h4 class="title">${item.unit}$ ${item.price}</h4>

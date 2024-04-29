@@ -9,23 +9,27 @@ const common = {
     removeUserInfo,
 }
 
-function getToken(){
-    localStorage.getItem(tokenKey)
+function getToken() {
+    return localStorage.getItem(tokenKey)
 }
-function setToken(token){
+
+function setToken(token) {
     localStorage.setItem(tokenKey, token)
-    
+
 }
-function removeToken(){
+
+function removeToken() {
     localStorage.removeItem(tokenKey)
 }
 
-function getUserInfo(){
-    localStorage.getItem('userInfo')
+function getUserInfo() {
+    return localStorage.getItem('userInfo')
 }
-function setUserInfo(userInfo){
+
+function setUserInfo(userInfo) {
     localStorage.setItem('userInfo', JSON.stringify(userInfo))
 }
-function removeUserInfo(){
+
+function removeUserInfo() {
     localStorage.removeItem('userInfo')
 }

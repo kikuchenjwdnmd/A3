@@ -72,7 +72,7 @@ let registerModal = `  <div class="modal fade" id="registerModal" tabindex="-1" 
 </div>`
 
 $('body').append(loginModal,registerModal)
-
+api.getUserInfo()
 // LoginFunction
 $('#loginForm').on('submit', (e) => {
   e.preventDefault();

@@ -3,6 +3,8 @@ const baseUrl = 'http://127.0.0.1:8000'
 const api = {
   userLogin,
   userRegister,
+  getUserInfo,
+  getFlightsPage,
 }
 
 
@@ -23,7 +25,8 @@ function userLogin(email, password) {
         $('#loginForm .tips').text()
 
         $('.header-action ul .header-btn').hide()
-
+        $('.header-action ul .loginUser').show()
+        $('.header-action ul .loginUser').text(response.data.userInfo.username)
       }
       if (response.code == 1){
         $('#loginForm .tips').text(response.msg)
@@ -48,4 +51,42 @@ function userRegister(data){
       }
     }
   })
+}
+
+function getUserInfo(){
+  $.ajax({
+    type: "get",
+    url: baseUrl + "/user/getUserInfo/",
+    headers: {
+      Authorization: common.getToken()
+    },
+    dataType: "json",
+    success: function (response) {
+      if (response.code == 1){
+        common.removeToken()
+        common.removeUserInfo()
+        $('.header-action ul .header-btn').show()
+        $('.header-action ul .loginUser').hide()
+      }
+      if (response.code == 0){
+        common.setUserInfo(response.data)
+        $('.header-action ul .header-btn').hide()
+        $('.header-action ul .loginUser').show()
+        $('.header-action ul .loginUser').text(response.data.username)
+      }
+      console.log(response);
+    }
+  });
+}
+
+function getFlightsPage(data, callback){
+  $.ajax({
+    type: "get",
+    url: baseUrl + "/flights/getFlightsPage/",
+    data: data,
+    dataType: "json",
+    success: function (response) {
+      callback(response)
+    }
+  });
 }
