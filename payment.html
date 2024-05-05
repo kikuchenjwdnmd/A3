@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - MIS202 A2 Flight Center</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    footer {
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <style>
+    .navigation a, .header-top a {
+      color: #000000; /* Black for maximum contrast against a yellow background */
+    }
+    .navigation a:hover {
+      color: #004c99; /* Dark blue for hover effects */
+    }
+  </style>
+  <div class="header-top">
+    <div class="container custom-container">
+      <div class="row">
+        <div class="col-xl-4 header-top-left">
+          <div class="header-top-left">
+            <a href="#" style="color: #000000;"><i class="fa-solid fa-plane"></i> Airline rules & Ticketing instructions</a>
+          </div>
+        </div>
+        <div class="col-xl-8 header-top-right">
+          <ul>
+            <li><a href="contact.html" style="color: #000000;"><i class="fa-solid fa-comments"></i> Feedback</a></li>
+            <li><a href="#" style="color: #000000;"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+            <li><a href="contact.html" style="color: #000000;"><i class="fa-solid fa-dollar-sign"></i> Currency</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sticky-header" class="menu-area transparent-header">
+    <div class="container custom-container">
+      <div class="row">
+        <div class="col-12">
+          <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+          <div class="menu-wrap">
+            <nav class="menu-nav show">
+              <div class="logo">
+                <a href="index.html">
+                  <img src="image/torrens-university-australia-logo.svg" alt="" style="width: 128px;">
+                </a>
+              </div>
+              <div class="navbar-wrap main-menu d-none d-lg-flex">
+                <ul class="navigation">
+                  <li><a href="index.html" style="color: #000000;">Home</a></li>
+                  <li class="menu-item-has-children">
+                    <a href="#" style="color: #000000;">Pages</a>
+                    <ul class="submenu">
+                      <li><a href="booking.html" style="color: #000000;">Booking List</a></li>
+                      <li><a href="booking-details.html" style="color: #000000;">Booking Details</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="contact.html" style="color: #000000;">Contact</a></li>
+                </ul>
+              </div>
+              <div class="header-action d-none d-md-block">
+                <ul>
+                  <li class="country">
+                    <a href="#" style="color: #000000;">AUD <img src="image/aud.png" alt="" style="width:30px;height:30px;"></a>
+                  </li>
+                  <li class="question"><a href="contact.html" style="color: #000000;">?</a></li>
+                  <li class="header-btn">
+                    <button data-bs-toggle="modal" data-bs-target="#registerModal" class="btn">Register</button>
+                  </li>
+                  <li class="header-btn sign-in">
+                    <button data-bs-toggle="modal" data-bs-target="#loginModal" class="btn">Sign In</button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- Mobile Menu -->
+          <div class="mobile-menu">
+            <nav class="menu-box">
+              <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+              <div class="nav-logo"><a href="index.html"><img src="image/torrens-university-australia-logo.svg" alt="" style="width: 154px;"></a></div>
+              <div class="menu-outer"> <!-- same navigation items as above for mobile --> </div>
+              <div class="social-links">
+                <ul>
+                  <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                  <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                  <li><a href="#"><span the="fab fa-pinterest-p"></span></a></li>
+                  <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                  <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="menu-backdrop"></div>
+          <!-- End Mobile Menu -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<main class="content">
+  <div class="container">
+    <h1 class="mt-5">Payment Details</h1>
+    <form>
+      <div class="mb-3">
+        <label for="cardName" class="form-label">Name on Card</label>
+        <input type="text" class="form-control" id="cardName" required>
+      </div>
+      <div class="mb-3">
+        <label for="cardNumber" class="form-label">Card Number</label>
+        <input type="text" class="form-control" id="cardNumber" pattern="[0-9]{16}" required>
+      </div>
+      <div class="mb-3 row">
+        <div class="col">
+          <label for="cardExpiry" class="form-label">Expiration Date</label>
+          <input type="text" class="form-control" id="cardExpiry" placeholder="MM/YY" required>
+        </div>
+        <div class="col">
+          <label for="cardCVC" class="form-label">CVC</label>
+          <input type="text" class="form-control" id="cardCVC" pattern="[0-9]{3}" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="billingAddress" class="form-label">Billing Address</label>
+        <textarea class="form-control" id="billingAddress" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Payment</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-area footer-bg">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <div class="footer-logo"><a href="#"><img src="image/torrens-university-australia-logo.svg" alt="" style="width: 128px;"></a></div>
+              <div class="footer-content">
+                <p>We look forward to meeting more students</p>
+                <ul class="footer-social">
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <div class="fw-title">
+                <h4 class="title">Explore</h4>
+              </div>
+              <div class="fw-link">
+                <ul>
+                  <li><a href="contact.html">About us</a></li>
+                  <li><a href="contact.html">Travel alerts</a></li>
+                  <li><a href="contact.html">Awards</a></li>
+                  <li><a href="contact.html">Qatarisation</a></li>
+                  <li><a href="contact.html">Careers</a></li>
+                  <li><a href="contact.html">Beyond</a></li>
+                  <li><a href="contact.html">Press release</a></li>
+                  <li><a href="contact.html">Airways Cargo</a></li>
+                  <li><a href="contact.html">Sponsorship</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-4">
+            <div class="footer-widget privacy">
+              <div class="fw-title">
+                <h4 class="title">Privacy</h4>
+              </div>
+              <div class="fw-link">
+                <ul>
+                  <li><a href="booking.html">Airline fees</a></li>
+                  <li><a href="booking.html">Airline guides</a></li>
+                  <li><a href="booking.html">Airport guides</a></li>
+                  <li><a href="booking.html">Low fare tips</a></li>
+                  <li><a href="booking.html">Flights</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-8">
+            <div class="footer-widget">
+              <div class="fw-title">
+                <h4 class="title">Contacts</h4>
+              </div>
+              <div class="footer-contact">
+                <p>Sunnybank hills BNS QLD</p>
+                <h2 class="title"><a href="#">+61 8000 0000</a></h2>
+                <a href="#">Ziyu.Chen@Student.Torrens.edu.au</a>
+                <form action="#">
+                  <input type="email" placeholder="Enter your email">
+                  <button type="submit"><i class="flaticon-send"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <!-- Optional left content -->
+          </div>
+          <div class="col-lg-6">
+            <div class="cart-img text-end"><img src="image/cart.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/Api.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
